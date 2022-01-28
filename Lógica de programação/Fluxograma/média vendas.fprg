@@ -1,0 +1,44 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="2.11">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="Adriano"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2022-01-07 11:33:11 "/>
+        <attribute name="created" value="QWRyaWFubztBRFJJQU5POzIwMjItMDEtMDc7IjEwOjE2OjI2ICI7MjM5Nw=="/>
+        <attribute name="edited" value="QWRyaWFubztBRFJJQU5POzIwMjItMDEtMDc7IjExOjMzOjExICI7MTsyNDk5"/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="media, m1, m2, m3, m4" type="Real" array="False" size=""/>
+            <declare name="mes1, mes2, mes3, mes4" type="String" array="False" size=""/>
+            <output expression="&quot;Qual m&#234;s deseja informar suas vendas?&quot;" newline="True"/>
+            <input variable="mes1"/>
+            <output expression="&quot;Qual foi o valor de vendas em &quot; &amp; mes1" newline="True"/>
+            <input variable="m1"/>
+            <output expression="&quot;Qual m&#234;s deseja informar suas vendas?&quot;" newline="True"/>
+            <input variable="mes2"/>
+            <output expression="&quot;Qual foi o valor de vendas em &quot; &amp; mes2" newline="True"/>
+            <input variable="m2"/>
+            <output expression="&quot;Qual m&#234;s deseja informar suas vendas?&quot;" newline="True"/>
+            <input variable="mes3"/>
+            <output expression="&quot;Qual foi o valor de vendas em &quot; &amp; mes3" newline="True"/>
+            <input variable="m3"/>
+            <output expression="&quot;Qual m&#234;s deseja informar suas vendas?&quot;" newline="True"/>
+            <input variable="mes4"/>
+            <output expression="&quot;Qual foi o valor de vendas em &quot; &amp; mes4" newline="True"/>
+            <input variable="m4"/>
+            <assign variable="media" expression="(m1+m2+m3+m4)/4"/>
+            <output expression="&quot;Sua m&#233;dia de vendas foi de: R$&quot; &amp; media" newline="True"/>
+            <if expression="media&gt;=5000">
+                <then>
+                    <output expression="&quot;Parab&#233;ns, voc&#234; recebar&#225; o abono de 10% e ser&#225; de R$&quot; &amp; (m1+m2+m3+m4)*0.1" newline="True"/>
+                </then>
+                <else>
+                    <output expression="&quot;Seu abono ser&#225; de 3%, no valor de R$&quot; &amp; (m1+m2+m3+m4)*0.03" newline="True"/>
+                </else>
+            </if>
+        </body>
+    </function>
+</flowgorithm>

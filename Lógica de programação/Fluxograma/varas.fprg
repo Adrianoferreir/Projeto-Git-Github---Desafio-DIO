@@ -1,0 +1,56 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="2.11">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="Adriano"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2022-01-19 12:37:46 "/>
+        <attribute name="created" value="QWRyaWFubztBRFJJQU5POzIwMjItMDEtMTg7IjEwOjUyOjMyICI7MjM5Ng=="/>
+        <attribute name="edited" value="QWRyaWFubztBRFJJQU5POzIwMjItMDEtMTk7IjEyOjM3OjQ2ICI7MjsyNTE2"/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="maior, menor, varas, buscador" type="Integer" array="False" size=""/>
+            <declare name="multiplicador" type="Integer" array="True" size="7"/>
+            <assign variable="multiplicador[1]" expression="6"/>
+            <assign variable="multiplicador[2]" expression="5"/>
+            <assign variable="multiplicador[3]" expression="4"/>
+            <assign variable="multiplicador[4]" expression="3"/>
+            <assign variable="multiplicador[5]" expression="2"/>
+            <assign variable="multiplicador[6]" expression="2"/>
+            <assign variable="varas" expression="1"/>
+            <output expression="&quot;Digite o nivel da vara que quer alcan&#231;ar: &quot;" newline="True"/>
+            <input variable="maior"/>
+            <if expression="maior&lt;=7">
+                <then>
+                    <output expression="&quot;Digite a vara que quer utilizar: &quot;" newline="True"/>
+                    <input variable="menor"/>
+                    <if expression="menor&gt;=1">
+                        <then>
+                            <if expression="menor&lt;maior">
+                                <then>
+                                    <assign variable="buscador" expression="menor"/>
+                                    <while expression="buscador&lt;maior">
+                                        <assign variable="varas" expression="varas*multiplicador[buscador]"/>
+                                        <assign variable="buscador" expression="buscador+1"/>
+                                    </while>
+                                    <output expression="&quot;Voc&#234; precisa de &quot; &amp; varas &amp; &quot; de n&#237;vel &quot; &amp; menor &amp; &quot; para 1 vara n&#237;vel &quot; &amp; maior" newline="True"/>
+                                </then>
+                                <else>
+                                    <output expression="&quot;Por favor indique uma vara de n&#237;vel inferior em rela&#231;&#227;o a que pretende utilizar&quot;" newline="True"/>
+                                </else>
+                            </if>
+                        </then>
+                        <else>
+                            <output expression="&quot;N&#237;vel minimo de vara invalido&quot;" newline="True"/>
+                        </else>
+                    </if>
+                </then>
+                <else>
+                    <output expression="&quot;N&#237;vel maximo de vara invalido&quot;" newline="True"/>
+                </else>
+            </if>
+        </body>
+    </function>
+</flowgorithm>
